@@ -1,17 +1,17 @@
 // src/components/Layout.jsx
-import { Link } from 'react-router-dom';
-import './Layout.css'; // You’ll create this next
-import logo from '../assets/Joflicks.png'; // <- Import your logo
+import { Link, Outlet } from 'react-router-dom';
+import './Layout.css';
+import logo from '../assets/Joflicks.png';
 
-function Layout({ children }) {
+function Layout() {
   return (
     <div className="app-layout">
       {/* Navbar */}
       <nav className="navbar">
         <div>
-         <Link to="/">
-          <img src={logo} alt="JoFlicks Logo" className="logo-img" />
-        </Link>
+          <Link to="/">
+            <img src={logo} alt="JoFlicks Logo" className="logo-img" />
+          </Link>
         </div>
         <div className="nav-buttons">
           <Link to="/login" className="nav-btn">Login</Link>
@@ -19,9 +19,9 @@ function Layout({ children }) {
         </div>
       </nav>
 
-      {/* Page content */}
-      <main className="main-content">
-        {children}
+      {/* Main page content */}
+      <main style={{ flexGrow: 1, padding: '20px' }}>
+        <Outlet /> {/* ✅ This tells React Router to render the current route */}
       </main>
     </div>
   );
