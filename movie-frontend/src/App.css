@@ -40,3 +40,12 @@
 .read-the-docs {
   color: #888;
 }
+
+body {
+  background-color: #1e3a8a; /* Deep blue */
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  color: white; /* Optional: make text readable */
+}
+
