@@ -14,7 +14,7 @@ const SignupPage = () => {
     e.preventDefault();
     try {
       const BASE_URL = import.meta.env.VITE_BACKEND_URL;
-      const res = await axios.post(`${BASE_URL}/api/auth/signup`, form);
+      const res = await axios.post(`${BASE_URL}/api/signup`, form);
       localStorage.setItem('token', res.data.token);
       navigate('/dashboard'); // You can change this to another route like "/profile"
     } catch (err) {

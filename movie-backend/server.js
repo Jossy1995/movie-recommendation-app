@@ -11,7 +11,11 @@ const reviewRoutes = require('./routes/reviews');
 const app = express();
 
 // Middleware
-app.use(cors({ origin: 'https://joflicks.vercel.app' }));
+app.use(cors({
+  origin: ['http://localhost:5173', 'https://joflicks.vercel.app'],
+  credentials: true
+}));
+
 app.use(express.json());
 
 app.get('/', (req, res) => {
