@@ -1,11 +1,14 @@
-body, html {
+
+html, body, .app-layout {
+  height: 100%;
   margin: 0;
   padding: 0;
-  height: 100%;
   font-family: 'Segoe UI', sans-serif;
   background: linear-gradient(to bottom right, #1e3a8a, #000428);
   color: white;
+  overflow-x: hidden; /* ✅ Prevent sideways scroll */
 }
+
 
 .app-layout {
   display: flex;
