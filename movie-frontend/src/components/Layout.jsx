@@ -20,9 +20,20 @@ function Layout() {
       </nav>
 
       {/* Main page content */}
-      <main style={{ flexGrow: 1, padding: '20px' }}>
-        <Outlet /> {/* ✅ This tells React Router to render the current route */}
-      </main>
+      <main className="main-content">
+  <section className="welcome-section">
+    <h1>Welcome to JoFlicks 🍿</h1>
+    <p>Discover movies, build your favorites & watchlist, and share reviews.</p>
+  </section>
+
+  <section className="featured-section">
+    <h2>Featured Movies</h2>
+    {/* You can fetch and map movie cards here */}
+  </section>
+
+  <Outlet />
+</main>
+
     </div>
   );
 }
