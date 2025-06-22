@@ -11,7 +11,7 @@ const reviewRoutes = require('./routes/reviews');
 const app = express();
 
 // Middleware
-app.use(cors());
+app.use(cors({ origin: 'https://joflicks.vercel.app' }));
 app.use(express.json());
 
 app.get('/', (req, res) => {
@@ -19,8 +19,9 @@ app.get('/', (req, res) => {
 });
 
 // Routes with prefixes
-app.use('/api/signup', signupRoutes);
-app.use('/api/login', loginRoutes);
+app.use('/api/auth/signup', signupRoutes);
+app.use('/api/auth/login', loginRoutes);
+
 app.use('/api/user', userRoutes);
 app.use('/api/reviews', reviewRoutes);
 
