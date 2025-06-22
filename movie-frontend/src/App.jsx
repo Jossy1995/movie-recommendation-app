@@ -9,6 +9,7 @@ import Favorites from './pages/Favorites';
 import Watchlist from './pages/Watchlist';
 import UserProfile from './pages/UserProfile';
 import MovieDetails from './pages/MovieDetails';
+import Layout from './components/Layout';
 
 
 
@@ -25,6 +26,8 @@ function App() {
       <Route path="/movies/:id" element={<MovieDetails />} />
       <Route path="/profile" element={<UserProfile />} />
     </Routes>
+
+    
   );
 }
 
