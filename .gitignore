@@ -28,3 +28,12 @@ pnpm-debug.log*
 # system files
 .DS_Store
 Thumbs.db
+
+# Backend-specific ignores
+/movie-backend/node_modules
+/movie-backend/.env
+/movie-backend/.env.*.local
+
+/movie-frontend/node_modules
+/movie-frontend/.env
+/movie-frontend/.env.*.local
